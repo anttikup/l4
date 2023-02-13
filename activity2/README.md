@@ -11,25 +11,25 @@
 - Given the following input (`4322, 1334, 1471, 9679, 1989, 6171, 6173, 4199`) and the hash function `x mod 10`, which of the following statements are true?
 - [x] `9679, 1989, 4199` hash to the same value
 - [x] `1471, 6171` hash to the same value
-- [] All elements hash to the same value
-- [] Each element hashes to a different value
+- [ ] All elements hash to the same value
+- [ ] Each element hashes to a different value
 
 ## Task 2
 
 - Bucket Hashing Practice. Refer to the following [link](https://opendsa-server.cs.vt.edu/OpenDSA/Exercises/Hashing/HashBucketPRO.html).
 - The keys `12, 18, 13, 2, 3, 23, 5 and 15` are inserted into an initially empty hash table of length `10` using open addressing with hash function `h(k) = k mod 10` and **linear probing**. What is the resultant hash table?
 
--- 0: 
--- 1: 
--- 2: 12, 2
--- 3: 13, 3, 23
--- 4: 
--- 5: 5, 15
--- 6: 
--- 7: 
--- 8: 18
--- 9: 
--- 10: 
+  * 0: 
+  * 1: 
+  * 2: 12, 2
+  * 3: 13, 3, 23
+  * 4: 
+  * 5: 5, 15
+  * 6: 
+  * 7: 
+  * 8: 18
+  * 9: 
+  * 10: 
 
 ## Task 3:
 
