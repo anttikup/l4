@@ -29,16 +29,15 @@
   * 7: 
   * 8: 18
   * 9: 
-  * 10: 
 
 ## Task 3:
 
 - What is the [Birthday Paradox](http://en.wikipedia.org/wiki/Birthday_problem)?
-  The probability that given n people two or more share the same birthday is suprisingly high.
+  * The probability that given n people two or more share the same birthday is suprisingly high.
 - Why is it generally discussed with hashing?
-It is equivalent to having a hash table of 365 slots and n values.
+  * It is equivalent to having a hash table of 365 slots and n values.
 - In a hash table of 9658 slots, what is the smallest number of records that must be inserted for the probability of a collision to be 61% or more? Use the calculator at this [link](https://opendsa-server.cs.vt.edu/ODSA/AV/Hashing/Birthday.html)
-  136
+  * 136
 - Discuss in groups how the following program works `./src/birthday.cpp`?
 
 ## Task 4: Individual (at home)
