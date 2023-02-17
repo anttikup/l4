@@ -1,7 +1,7 @@
 #include <iostream>
 
-void printArray(int len, int arr[]) {
-  for ( size_t i = 0; i < len; i++ ) {
+void printArray(int left, int right, int arr[]) {
+  for ( size_t i = left; i <= right; i++ ) {
     std::cout << arr[i] << "\t";
   }
 
@@ -37,7 +37,7 @@ bool boundsHaveCrossed(int left, int right) {
 
 int partition(int arr[], int left, int right, int pivot) {
   std:: cout << "partition: " << left << ", " << right << " with pivot @ " << pivot << " = " << arr[pivot] << std::endl;
-  printArray(8, arr);
+  printArray(left, right, arr);
 
   while ( left < right ) {
     left = findGreaterThanOrEqualToPivot(arr, left, pivot);
@@ -45,7 +45,7 @@ int partition(int arr[], int left, int right, int pivot) {
     if ( left < right ) {
       std::cout << "order swap: " << left << ", " << right << std::endl;
       swap(arr[left], arr[right]);
-      printArray(8, arr);
+      printArray(left, right, arr);
     }
 
   }
@@ -55,22 +55,22 @@ int partition(int arr[], int left, int right, int pivot) {
 
 void sort(int arr[], int left, int right) {
   std::cout << "sort: " << left << ", " << right << std::endl;
-  printArray(8, arr);
+  printArray(left, right, arr);
   int mid = left + ((right - left) >> 1);
 
   std::cout << "choose pivot and swap it to end: " << mid << ", " << right << std::endl;
   swap(arr[mid], arr[right]);
-  printArray(8, arr);
+  printArray(left, right, arr);
 
   int pivot = partition(arr, left, right, right);
   std::cout << "swap pivot to place: " << pivot << ", " << right << std::endl;
   swap(arr[pivot], arr[right]);
-  printArray(8, arr);
+  printArray(left, right, arr);
 
   if ( pivot - left > 1 ) {
     std::cout << "sort left subarray" << std::endl;
     sort(arr, left, pivot - 1);
-    printArray(8, arr);
+    printArray(left, right, arr);
   }
 
   if ( right - pivot > 1 ) {
@@ -78,37 +78,5 @@ void sort(int arr[], int left, int right) {
     sort(arr, pivot + 1, right);
   }
 
-  printArray(8, arr);
-}
-
-
-
-
-bool isSorted(int len, int arr[]) {
-
-  for ( int i = 1; i < len; i++ ) {
-    if ( arr[i] < arr[i - 1] ) {
-      return false;
-    }
-  }
-
-  return true;
-}
-
-
-int main(int argc, char *argv[]) {
-
-
-  int arr[] = { 98, 3, 32, 9, 2, 22, 8, 4 };
-  int len = 8;
-
-  printArray(len, arr);
-
-  sort(arr, 0, 7);
-
-  printArray(len, arr);
-
-  std::cout << (isSorted(len, arr) ? "sorted" : "not sorted") << std::endl;
-
-  return 0;
+  printArray(left, right, arr);
 }
