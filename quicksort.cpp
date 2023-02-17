@@ -65,7 +65,7 @@ int partition(int arr[], int left, int right, int pivot) {
 void sort(int arr[], int left, int right) {
   std::cout << "sort: " << left << ", " << right << std::endl;
   printArray(left, right, arr);
-  int mid = left + ((right - left) >> 1);
+  int mid = (left + right) >> 1;
 
   std::cout << "choose pivot and swap it to end: " << mid << ", " << right << std::endl;
   swap(arr[mid], arr[right]);
