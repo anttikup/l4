@@ -21,7 +21,7 @@ int randomInt(int min, int max) {
 }
 
 void test(int len, int arr[]) {
-  sort(arr, 0, len-1);
+  quickSort(len, arr);
   bool sorted = isSorted(len, arr);
   std::cout << (sorted ? "sorted" : "not sorted") << std::endl;
 
@@ -30,7 +30,7 @@ void test(int len, int arr[]) {
 
 int main(int argc, char *argv[]) {
 
-  for ( int n = 0; n < 100; n++ ) {
+  for ( int n = 0; n < 200; n++ ) {
     int len = randomInt(1, 11);
     std::cout << len << std::endl;
     int arr[len];

@@ -1,8 +1,17 @@
 #include <iostream>
 
+int max;
+int min;
+
 void printArray(int left, int right, int arr[]) {
-  for ( size_t i = left; i <= right; i++ ) {
+  for ( size_t i = min; i <= max; i++ ) {
+    if ( i == left ) {
+      std::cout << "\E[45m";
+    }
     std::cout << arr[i] << "\t";
+    if ( i == right ) {
+      std::cout << "\E[m";
+    }
   }
 
   std::cout << std::endl;
@@ -79,4 +88,12 @@ void sort(int arr[], int left, int right) {
   }
 
   printArray(left, right, arr);
+}
+
+void quickSort(int len, int arr[]) {
+  min = 0;
+  max = len - 1;
+
+  std::cout << "quickSort: " << std::endl;
+  sort(arr, min, max);
 }
