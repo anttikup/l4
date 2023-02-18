@@ -19,16 +19,16 @@
 - Bucket Hashing Practice. Refer to the following [link](https://opendsa-server.cs.vt.edu/OpenDSA/Exercises/Hashing/HashBucketPRO.html).
 - The keys `12, 18, 13, 2, 3, 23, 5 and 15` are inserted into an initially empty hash table of length `10` using open addressing with hash function `h(k) = k mod 10` and **linear probing**. What is the resultant hash table?
 
-  * 0: 
-  * 1: 
+  * 0:
+  * 1:
   * 2: 12, 2
   * 3: 13, 3, 23
-  * 4: 
+  * 4:
   * 5: 5, 15
-  * 6: 
-  * 7: 
+  * 6:
+  * 7:
   * 8: 18
-  * 9: 
+  * 9:
 
 ## Task 3:
 
@@ -47,6 +47,12 @@
   https://www.geeksforgeeks.org/open-addressing-collision-handling-technique-in-hashing/
 
   https://www.geeksforgeeks.org/separate-chaining-collision-handling-technique-in-hashing/
+
+In Open Addressing, elements are stored in the hashtable itself. The hashtable either has a certain number of slots, that are filled sequentally, or some method is used to calculate another slot if the original is already in use, or the extra items are stored in a separate table.
+
+In Separate Chaning, elements are stored in linked lists. Each hash has its own linked list where the elements having that hash are appended.
+
+Open Addressing needs less space, but is more complex. Open addressing tables can never be full. Open addressing is useful when the number of keys is known in advance.
 
 - (Bonus) Run the following program and comment on the code `./src/hashtable.cpp`
 
